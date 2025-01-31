@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <title>Basic Canvas</title>
+    <style>
+        .canvas {
+            position: relative;
+            /* top: 20px;
+            left: 20px; */
+            float: left;
+        }
+        .input {
+            position: relative;
+            float: inline-start;
+            top: 20px;
+            left: 20px;
+        }
+
+        #info {
+            text-align: center;
+        }
+        
+        h1, p, label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="canvas">
+            <script id="main" type="module" src="main.js"></script>
+            <canvas id="canvas" height="800" width="800"></canvas>
+            <h1 id="info">Click to pick up the shape, click again to drop.</h1>
+        </div>
+        
+        <div class="input">
+            <p>Focal length :</p>
+            <input type="range" id="focalLength" min="0" max="1000">
+            <br>            
+            <p>Rotations :</p>
+            <div id="rotations">
+                <input type="checkbox" id="rotX">
+                    <label>X axis</lable>
+                <br>
+                <input type="checkbox" id="rotY">
+                    <label>Y axis</lable>
+                <br>
+                <input type="checkbox" id="rotZ">
+                    <label>Z axis</lable>
+                <br>
+                <!-- <input type="file" id="mesh" src="object/teapot.obj"> -->
+            </div>
+            <br>            
+        </div>
+    </div>
+</body>
